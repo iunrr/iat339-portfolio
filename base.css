@@ -1,0 +1,123 @@
+:root {
+    --primary: #241c2e;
+    --primary-lighter: #40344e;
+    --accent-purple: #b070fd;
+    --accent-pink: #f2aaf8;
+    --accent-teal: #a9dcfa;
+    --light-text: #e4cdff;
+}
+
+body {
+    background-color: var(--primary);
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+    color: var(--light-text);
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    max-width: 65ch;
+    line-height: 1.5em;
+    margin: 1.5em;
+    padding: 0em 0.5em;
+    border-left: 2px solid var(--light-text);
+}
+
+.pink {
+    color: var(--accent-pink)
+}
+
+.purple {
+    color: var(--accent-purple)
+}
+
+.teal {
+    color: var(--accent-teal)
+}
+
+ul {
+    all:unset;
+    list-style: none;
+}
+
+.blinking {
+    animation-name: blink;
+    animation-duration: 3s;
+    animation-timing-function: steps(2, jump-none);
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    padding: 1em 5vw;
+    color: var(--light-text);
+    background-color: var(--primary-lighter);
+}
+
+nav {
+    display: flex;
+    flex-flow: row;
+    max-width: 30em;
+    flex-grow: 1;
+    justify-items: flex-end;
+    align-items: center;
+}
+
+nav > a {
+    max-width: 5em;
+    font-size: 1.2em;
+    padding: 0 2.5em;
+    height: 2em;
+    line-height: 2em;
+}
+
+nav > a:nth-child(-n + 2) {
+    border-right: 2px solid var(--light-text);
+}
+
+a {
+    all:unset;
+}
+
+a:hover, a:focus {
+    background-color: var(--primary-lighter);
+    color: var(--light-text);
+    text-decoration: underline;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+#nav-wordmark {
+    font-size: 1.8em;
+    border: 2px solid var(--light-text);
+    padding: 0.1em 0.3em;
+}
