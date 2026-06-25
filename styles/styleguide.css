@@ -1,0 +1,30 @@
+h1 {
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    margin: 0.2em;
+}
+
+p {
+    background-color: var(--primary-darker);
+}
+
+
+pre {
+    font-size: 1.2em;
+    background-color: var(--primary-darker);
+    text-align: left;
+    text-wrap: wrap;
+    max-width: 80vw;
+    padding: 0.5em;
+}
+
+.style-item {
+    max-width: 80vw;
+    margin-bottom: 2em;
+}
+
+.style-item:not(:last-child) {
+    border-bottom: 2px solid var(--light-text);
+}

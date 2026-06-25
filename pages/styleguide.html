@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiloh Santiago</title>
     <link rel="stylesheet" href="../styles/base.css">
-    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/styleguide.css">
+    <link rel="stylesheet" href="../styles/project.css">
     <script src="../scripts/base.js" defer></script>
 </head>
 <body>
     <header>
-        <img id="header-burger" src="../assets/burger_menu.svg" onclick="openNavMenu()">
+        <img id="header-burger" src="../assets/burger_menu.svg" onclick="openNavMenu()" alt="Open menu">
         <a href="index.html" class="nav-wordmark">~S</a>
         <nav id="header-nav">
             <a class="purple" href="index.html" tabindex="0">Home</a>
@@ -20,6 +22,133 @@
     </header>
     <main>
         <h1>Style Guide</h1>
+        <section class="style-item">
+            <h2>Paragraph</h2>
+            <h3>Sample Code</h3>
+            <pre>
+                <code>
+&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quas animi porro dicta cum eos rem ullam accusantium qui soluta et, perferendis, reprehenderit mollitia excepturi dolorem commodi doloribus vitae nisi?&lt;/p&gt;
+                </code>
+            </pre>
+            <h3>Rendered Element</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quas animi porro dicta cum eos rem ullam accusantium qui soluta et, perferendis, reprehenderit mollitia excepturi dolorem commodi doloribus vitae nisi?</p>
+        </section>
+
+        <section class="style-item">
+            <h2>Link in text</h2>
+            <h3>Sample Code</h3>
+            <pre>
+                <code>
+&lt;p&gt;Lorem ipsum &lt;a class="pink"&gt;Link 1&lt;/a&gt; dolor sit &lt;a class="purple"&gt;Link 2&lt;/a&gt; amet consectetur &lt;a class="teal"&gt;Link 3&lt;/a&gt; adipisicing elit.&lt;/p&gt;
+                </code>
+            </pre>
+            <h3>Rendered Element</h3>
+            <p>Lorem ipsum <a class="pink">Link 1</a> dolor sit <a class="purple">Link 2</a> amet consectetur <a class="teal">Link 3</a> adipisicing elit.</p>
+        </section>
+
+        <section class="style-item">
+            <h2>Default Button</h2>
+            <h3>Sample Code</h3>
+            <pre>
+                <code>
+&lt;a class="button" id="er-button" href="eliteredux.html"&gt;Details&lt;/a&gt;
+                </code>
+            </pre>
+            <h3>Rendered Element</h3>
+            <a class="button" href="">Details</a>
+        </section>
+
+        <section class="style-item">
+            <h2>Headings</h2>
+            <h3>Sample Code</h3>
+            <pre>
+                <code>
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+                </code>
+            </pre>
+            <h3>Rendered Element</h3>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+        </section>
+
+        <section class="style-item">
+            <h2>Image</h2>
+            <h3>Sample Code</h3>
+            <pre>
+                <code>
+&lt;img class="project-thumbnail" src="../assets/eliteredux_title.webp"&gt;
+                </code>
+            </pre>
+            <h3>Rendered Element</h3>
+            <img class="project-thumbnail" src="../assets/eliteredux_title.webp" alt="Pokemon Elite Redux title screen, showing Rayquaza">
+        </section>
+
+        <section class="style-item">
+            <h2>Main Navigation Buttons</h2>
+            <h3>Sample Code</h3>
+            <pre>
+                <code>
+&lt;nav id="header-nav"&gt;
+    &lt;a class="purple" href="index.html" tabindex="0"&gt;Home&lt;/a&gt;
+    &lt;a class="pink" href="index.html#down-icon" tabindex="0"&gt;Projects&lt;/a&gt;
+    &lt;a class="teal" href="contact.html" tabindex="0"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+                </code>
+            </pre>
+            <h3>Rendered Element</h3>
+            <nav id="header-nav">
+                <a class="purple" href="index.html" tabindex="0">Home</a>
+                <a class="pink" href="index.html#down-icon" tabindex="0">Projects</a>
+                <a class="teal" href="contact.html" tabindex="0">Contact</a>
+            </nav>
+        </section>
+
+        <section class="style-item">
+            <h2>Project Card</h2>
+            <h3>Sample Code</h3>
+            <pre>
+                <code>
+&lt;div class="project-card" id="er-card"&gt;
+    &lt;div id="er-thumbnail"&gt;
+        &lt;img loading="lazy" id="er-title" src="../assets/eliteredux_title.webp" alt="Pokemon Elite Redux, title screen"&gt;
+    &lt;/div&gt;
+    &lt;p class="project-desc" id="er-desc"&gt;ROM Hack of Pokemon Emerald that overhauls a familiar adventure with custom Pokemon species, locations, trainers, and battle mechanics.&lt;/p&gt;
+    &lt;a class="button" id="er-button" href="eliteredux.html"&gt;Details&lt;/a&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+            <h3>Rendered Element</h3>
+            <div class="project-card" id="er-card">
+                <div id="er-thumbnail">
+                    <img loading="lazy" id="er-title" src="../assets/eliteredux_title.webp" alt="Pokemon Elite Redux, title screen">
+                </div>
+                <p class="project-desc" id="er-desc">ROM Hack of Pokemon Emerald that overhauls a familiar adventure with custom Pokemon species, locations, trainers, and battle mechanics.</p>
+                <a class="button" id="er-button" href="eliteredux.html">Details</a>
+            </div>
+        </section>
+
+        <section class="style-item">
+            <h2>Project Artifact</h2>
+            <h3>Sample Code</h3>
+            <pre>
+                <code>
+&lt;figure class="artifact"&gt;
+    &lt;img loading="lazy" class="artifact-img" src="../assets/erabilityscreen.webp" alt="Cetitan-Redux and its four abilities in the summary screen."&gt;
+    &lt;figcaption class="artifact-desc"&gt;Pokemon ability screen&lt;/figcaption&gt;
+&lt;/figure&gt;
+                </code>
+            </pre>
+            <h3>Rendered Element</h3>
+            <figure class="artifact">
+                <img loading="lazy" class="artifact-img" src="../assets/erabilityscreen.webp" alt="Cetitan-Redux and its four abilities in the summary screen.">
+                <figcaption class="artifact-desc">Pokemon ability screen</figcaption>
+            </figure>
+        </section>
 
     </main>
     <footer>

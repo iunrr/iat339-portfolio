@@ -89,7 +89,7 @@ ul {
 .blinking {
     animation-name: blink;
     animation-duration: 3s;
-    animation-timing-function: steps(2, jump-none);
+    animation-timing-function: steps(2);
     animation-iteration-count: infinite;
 }
 
@@ -272,7 +272,7 @@ a:hover, a:focus {
     color: var(--primary);
     padding: 0.5em;
     border-radius: 0.1em;
-    filter: drop-shadow(rgba(0,0,0,0.2) 0.5rem 0.5rem 7px);
+    filter: drop-shadow(0.5rem 0.5rem 7px rgba(0,0,0,0.2));
     transition-duration: 0.3s, 0.1s;
     transition-timing-function: ease-in;
     transition-property: background-color, color;
