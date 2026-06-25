@@ -1,0 +1,42 @@
+.contact-container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+@media screen and (orientation: portrait) {
+    .contact-container {
+        flex-flow: column;
+    }
+}
+
+.contact-item {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 25em;
+}
+
+.contact-desc {
+    background-color: var(--primary-darker);
+}
+
+.contact-section {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 5em;
+    height: 60vh;
+}
+
+@media screen and (orientation: portrait) {
+    .contact-section {
+        flex-flow: column;
+        align-items: center;
+        gap: 2em;
+    }
+}
+
+.contact-img {
+    width: 8em;
+}

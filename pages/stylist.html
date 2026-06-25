@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiloh Santiago</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/project.css">
+    <script src="../scripts/base.js" defer></script>
+</head>
+<body>
+    <header>
+        <img id="header-burger" src="../assets/burger_menu.svg" onclick="openNavMenu()">
+        <a href="index.html" class="nav-wordmark">~S</a>
+        <nav id="header-nav">
+            <a class="purple" href="index.html" tabindex="0">Home</a>
+            <a class="pink" href="index.html#down-icon" tabindex="0">Projects</a>
+            <a class="teal" href="contact.html" tabindex="0">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div id="project-info">
+            <h1 class="project-title">STYLIST</h1>
+            <div class-="project-thumbnail" id="stylist-thumbnail">
+                <img id="stylist-tape" src="../assets/stylist_tape.svg" alt="Stylist Tape Measure logo">
+                <p id="stylist-wordmark">STYLIST</p>
+            </div>
+            <a class="project-link" href="https://www.pokecommunity.com/threads/pok%C3%A9mon-elite-redux-v2-65-beta-complete-%E2%80%94-unique-multi-ability-difficulty-hack.499227/">Pokecommunity thread</a>
+            <p id="my-roles">My Roles: <a  class="role" href="https://en.wikipedia.org/wiki/React_Native">React Native Programmer</a> <a  class="role" href="https://en.wikipedia.org/wiki/User_interface_design">UI Designer</a> <a  class="role" href="https://en.wikipedia.org/wiki/Systems_design">Systems Designer</a></p>
+        </div>
+        <div id="process-container">
+            <h2>Process</h2>
+            <div class="process-item">
+                <p class="process-desc">STYLIST is a mobile application created as a group project for SFU IAT 359: Mobile Computing. Its function is to serve as a digital catalogue of clothing items that users input into the application. We used React Native and external APIs to build this application and implement its features. The main feature of STYLIST is that the user can algorithmically generate outfits from their catalogued items based on several factors, such as weather and formality. My role in the group was to build this feature, as well as the add-clothing-item feature and its UI/UX. This task, on its own, was by far the most complex in the entire project.</p>
+                <figure class="artifact">
+                    <img loading="lazy" class="artifact-img" src="../assets/StylistOutfits.webp" alt="The STYLIST application, showing an outfit of black pants, a shirt, and a black work jacket">
+                    <figcaption class="artifact-desc">STYLIST outfit generation screen</figcaption>
+                </figure>
+            </div>
+            <div class="process-item">
+                <p class="process-desc">My goal was to distill the process of selecting an outfit for the day into a logical algorithm simple enough to implement, but also with enough depth such that the outfits generated make sense and aren't arbitrary. First, I began with the factors that we already knew would be part of the algorithm. These would be the temperature ranges that we, as a group, discussed would be utilized using the weather API, as well as matching the formality of each clothing item. This was easy enough, but I was challenged when facing the issue of how the algorithm would deal with cases where there was no clothing item that fit the confirmed properties of the outfit. Then, I deduced that the logical behaviour of the algorithm should fall back to similar property values in these cases. For example, if there are no semi-formal tops in the clothing pool, then a casual top would do. Overall, STYLIST ended as a polished and fully functional application, and the entire group received stellar marks for our work on the project. My experience with this project allowed me to develop and apply my systems design and programming skills to a complex development case. </p>
+                <figure class="artifact">
+                    <img loading="lazy" class="artifact-img" src="../assets/StylistAlgo.webp" alt="Flowchart with sections depicting how to choose clothing items based off multiple factors, temperature, formality, and user tags.">
+                    <figcaption class="artifact-desc">STYLIST outfit generation algorithm flowchart</figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href=""><span class="teal">Style Guide</span></a>
+        <span class="dash-seperator" aria-hidden="true">-</span>
+        <a href="citations.html"><span class="purple">Citations</span></a>
+        <span class="dash-seperator" aria-hidden="true">-</span>
+        <a  href="https://github.com/iunrr/iat339-portfolio"><img id="github-invertocat" src="../assets/GitHub_Invertocat_White_Clearspace.svg" alt="Github Logo, portfolio Github repository"></a>
+    </footer>
+    <nav id="menu-nav">
+        <div id="menu-top">
+            <a href="index.html" class="nav-wordmark" id="menu-wordmark">~S</a>
+            <img id="close-menu-icon" src="../assets/close.svg" onclick="closeNavMenu()" alt="Close menu">
+        </div>
+        <a class="purple" href="index.html" tabindex="0">Home</a>
+        <a class="pink" href="#down-icon" tabindex="0">Projects</a>
+        <a class="teal" tabindex="0">Contact</a>
+    </nav>
+    <div id="menu-shadow" onclick="closeNavMenu()" aria-hidden="true"></div>
+</body>
+</html>

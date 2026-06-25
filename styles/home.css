@@ -1,0 +1,153 @@
+#name-title {
+    font-size: 3.5em;
+    margin: 1em;
+}
+
+@media screen and ((width < 600px) or (orientation: portrait)) {
+    #name-title {
+        font-size: 3em;
+    }
+
+    .bio {
+        font-size: 1.1em !important;
+    }
+}
+
+#projects-heading {
+    margin: 1em;
+}
+
+.bio {
+    font-size: 1.4em;
+    background-color: var(--primary-darker);
+}
+
+#project-section {
+    background-color: var(--primary-darker);
+    padding-bottom: 5em;
+}
+
+.project-card {
+    width: 23em;
+    height: 31em;
+    background-color: var(--primary-lighter);
+    filter: drop-shadow(rgba(0,0,0,0.3) 1rem 1rem 10px);
+    border-radius: 0.5em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 1em;
+}
+
+#stylist-thumbnail {
+    background-color: var(--stylist-orange);
+    width: 20em;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    filter: drop-shadow(rgba(0,0,0,0.2) 0.5rem 0.5rem 7px);
+}
+
+#stylist-wordmark {
+    all: unset;
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.project-desc{
+    background-color: var(--primary);
+}
+
+#project-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 6em;
+}
+
+@media screen and ((width < 950px) or (orientation: portrait)) {
+    #project-container {
+        flex-flow: column;
+    }
+}
+
+#er-title {
+    max-width: 20em;
+    filter: drop-shadow(rgba(0,0,0,0.2) 0.5rem 0.5rem 7px);
+}
+
+#er-button:hover, #er-button:focus {
+    color: white;
+}
+
+#er-button:hover {
+    background-color: #19271b;
+}
+
+#er-button:focus {
+    background-color: #3c6b43;
+}
+
+#er-card, #er-desc, #stylist-card, #stylist-desc {
+    pointer-events: none;
+    transition-duration: 0.3s, 0.1s;
+    transition-timing-function: ease-in;
+    transition-property: background-color, color;
+}
+
+#er-card #er-button, #er-desc #er-button, #stylist-card #stylist-button, #stylist-desc #stylist-button {
+    pointer-events: auto;
+}
+
+#er-card:hover, #er-card:focus {
+    background-color: #2b462f;
+}
+
+#er-card:hover #er-desc {
+    border-left: 2px solid white;
+    color: white;
+    background-color: #19271b;
+}
+
+#stylist-button:hover, #stylist-button:focus {
+    background-color: var(--stylist-orange);
+    color: white;
+}
+
+#stylist-card:hover, #stylist-card:focus {
+    background-color: #613923;
+}
+
+#stylist-card:hover #stylist-desc {
+    border-left: 2px solid white;
+    color: white;
+    background-color: #3b1f10;
+}
+
+@media screen and (width < 500px){
+    .project-card {
+        width: 19em;
+        height: 27em;
+        padding: 2em 0em;
+    }
+
+    #stylist-thumbnail, #er-title {
+        width: 15em;
+    }
+
+    #stylist-thumbnail {
+        height: 7.5em;
+    }
+
+    #stylist-wordmark {
+        font-size: 2em;
+    }
+
+    .project-desc {
+        font-size: 1em;
+    }
+}

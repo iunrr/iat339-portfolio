@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiloh Santiago</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/project.css">
+    <script src="../scripts/base.js" defer></script>
+</head>
+<body>
+    <header>
+        <img id="header-burger" src="../assets/burger_menu.svg" onclick="openNavMenu()">
+        <a href="index.html" class="nav-wordmark">~S</a>
+        <nav id="header-nav">
+            <a class="purple" href="index.html" tabindex="0">Home</a>
+            <a class="pink" href="index.html#down-icon" tabindex="0">Projects</a>
+            <a class="teal" href="contact.html" tabindex="0">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div id="project-info">
+            <h1 class="project-title">Pokemon Elite Redux</h1>
+            <img class="project-thumbnail" src="../assets/eliteredux_title.webp">
+            <a class="project-link" href="https://www.pokecommunity.com/threads/pok%C3%A9mon-elite-redux-v2-65-beta-complete-%E2%80%94-unique-multi-ability-difficulty-hack.499227/">Pokecommunity thread</a>
+            <p id="my-roles">My Roles: <a  class="role" href="https://en.wikipedia.org/wiki/C%2B%2B">C++ Programmer</a> <a  class="role" href="https://en.wikipedia.org/wiki/Game_design">Game Designer</a></p>
+        </div>
+        <div id="process-container">
+            <h2>Process</h2>
+            <div class="process-item">
+                <p class="process-desc">Pokémon Elite Redux is a community-made Pokémon ROM hack. It is a full end-to-end overhaul of Pokémon Emerald. It features a completely reworked codebase in C++ and Assembly, implementing custom game-play mechanics and systems. The development environment is best described as an agile team, with different departments grouped by art, coding, and game design. My main role within the team is a battle system programmer. Typically, we create content in batches of updates to the game, or sprints in agile terms. One bug I'm proud of solving was where the Pokémon's abilities didn't trigger in the correct order during battles and looped infinitely.</p>
+                <figure class="artifact">
+                    <img loading="lazy" class="artifact-img" src="../assets/erabilityscreen.webp" alt="Cetitan-Redux and its four abilities in the summary screen.">
+                    <figcaption class="artifact-desc">Pokemon ability screen</figcaption>
+                </figure>
+            </div>
+            <div class="process-item">
+                <p class="process-desc">When I dealt with this high-severity bug, I drew on my C++ expertise to isolate different parts of the codebase to attempt to find the cause of the issue. First, I used breakpoints and print statements to examine the game state at a high level, and then gradually inspected the lower-level systems and functions that seemed problematic. The main challenge I faced, however, was that the issue could not be traced to any single line of code. Still, I combed through every possibility across the entire battle system to find the cause.</p>
+                <figure class="artifact">
+                    <img loading="lazy" class="artifact-img" src="../assets/erabilityflow.webp" alt="Flowchart depicting the order of ability events at the start of battle.">
+                    <figcaption class="artifact-desc">Entry ability gamestate flow</figcaption>
+                </figure>
+            </div>
+            <div class="process-item">
+                <p class="process-desc">After two days of debugging, I remembered a specific piece of wisdom about C++ integers. It was the fact that they could overflow or underflow if the value exceeded the bit capacity of the variable. I checked every bit-field and sure enough, one iterator variable was declared one bit too short for its purpose and constantly overflowed back to zero, creating the infinite loop. After fixing the erroneous variable, we were finally able to deploy the new update to production. This endeavor allowed me to learn every detail of a professional-level game system, and speaks to my pragmatic problem-solving capabilities and reliable programming knowledge.</p>
+                <figure class="artifact">
+                    <img loading="lazy" class="artifact-img" src="../assets/erturn1.webp" alt="Cetitan-Redux in battle against a Komala, player is given control">
+                    <figcaption class="artifact-desc">Turn 1, abilities successfully resolve</figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="styleguide.html"><span class="teal">Style Guide</span></a>
+        <span class="dash-seperator" aria-hidden="true">-</span>
+        <a href="citations.html"><span class="purple">Citations</span></a>
+        <span class="dash-seperator" aria-hidden="true">-</span>
+        <a  href="https://github.com/iunrr/iat339-portfolio"><img id="github-invertocat" src="../assets/GitHub_Invertocat_White_Clearspace.svg" alt="Github Logo, portfolio Github repository"></a>
+    </footer>
+    <nav id="menu-nav">
+        <div id="menu-top">
+            <a href="index.html" class="nav-wordmark" id="menu-wordmark">~S</a>
+            <img id="close-menu-icon" src="../assets/close.svg" onclick="closeNavMenu()" alt="Close menu">
+        </div>
+        <a class="purple" href="index.html" tabindex="0">Home</a>
+        <a class="pink" href="#down-icon" tabindex="0">Projects</a>
+        <a class="teal" tabindex="0">Contact</a>
+    </nav>
+    <div id="menu-shadow" onclick="closeNavMenu()" aria-hidden="true"></div>
+</body>
+</html>

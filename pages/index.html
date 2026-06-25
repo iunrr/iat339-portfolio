@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiloh Santiago</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <script src="../scripts/base.js" defer></script>
+</head>
+<body>
+    <header>
+        <img id="header-burger" src="../assets/burger_menu.svg" onclick="openNavMenu()">
+        <a href="index.html" class="nav-wordmark">~S</a>
+        <nav id="header-nav">
+            <a class="purple" href="index.html" tabindex="0">Home</a>
+            <a class="pink" href="#down-icon" tabindex="0">Projects</a>
+            <a class="teal" href="contact.html" tabindex="0">Contact</a>
+        </nav>
+    </header>
+    <section>
+        <h1 id="name-title">> Shiloh Santiago<span class="blinking">_</span></h1>
+
+        <p class="bio"><em class="purple"><a href="https://en.wikipedia.org/wiki/Front-end_web_development">Front-end programmer</a></em> that connects contemporary culture to the tried and true, creating elevated but playful designs.</p>
+
+        <p class="bio"><em class="pink"><a href="https://en.wikipedia.org/wiki/Video_game_developer">Game developer</a></em> who has extensive team experience in designing, debugging, and dabbling in games, both tabletop and video.</p>
+
+        <p class="bio"><em class="teal"><a href="https://en.wikipedia.org/wiki/Queer">Proud queer</a></em> living by the truth that our diversity and details are what make us human.</p>
+    </section>
+    <a class="icon-link" href="#down-icon"><img id="down-icon" src="../assets/keyboard_arrow_down.svg" alt="Downwards arrow icon, move down to project section"></a>
+    <section id="project-section">
+        <h2 id="projects-heading">Projects</h2>
+        <div id="project-container">
+            <div class="project-card" id="stylist-card">
+                <div id="stylist-thumbnail">
+                    <img loading="lazy" src="../assets/stylist_tape.svg" alt="Stylist Tape Measure logo">
+                    <p id="stylist-wordmark">STYLIST</p>
+                </div>
+                <p class="project-desc" id="stylist-desc">A digital wardrobe for users to keep track of their clothing and generate outfits from it based off the local weather. Built for mobile devices using React Native.</p>
+                <a class="button" id="stylist-button" href="stylist.html">Details</a>
+            </div>
+            <div class="project-card" id="er-card">
+                <div id="er-thumbnail">
+                    <img loading="lazy" id="er-title" src="../assets/eliteredux_title.webp" alt="Pokemon Elite Redux, title screen">
+                </div>
+                <p class="project-desc" id="er-desc">ROM Hack of Pokemon Emerald that overhauls a familiar adventure with custom Pokemon species, locations, trainers, and battle mechanics.</p>
+                <a class="button" id="er-button" href="eliteredux.html">Details</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <a href="styleguide.html"><span class="teal">Style Guide</span></a>
+        <span class="dash-seperator" aria-hidden="true">-</span>
+        <a href="citations.html"><span class="purple">Citations</span></a>
+        <span class="dash-seperator" aria-hidden="true">-</span>
+        <a  href="https://github.com/iunrr/iat339-portfolio"><img id="github-invertocat" src="../assets/GitHub_Invertocat_White_Clearspace.svg" alt="Github Logo, portfolio Github repository"></a>
+    </footer>
+    <nav id="menu-nav">
+        <div id="menu-top">
+            <a href="index.html" class="nav-wordmark" id="menu-wordmark">~S</a>
+            <img id="close-menu-icon" src="../assets/close.svg" onclick="closeNavMenu()" alt="Close menu">
+        </div>
+        <a class="purple" href="index.html" tabindex="0">Home</a>
+        <a class="pink" href="#down-icon" tabindex="0">Projects</a>
+        <a class="teal" tabindex="0">Contact</a>
+    </nav>
+    <div id="menu-shadow" onclick="closeNavMenu()" aria-hidden="true"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiloh Santiago</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <script src="../scripts/base.js" defer></script>
+</head>
+<body>
+    <header>
+        <img id="header-burger" src="../assets/burger_menu.svg" onclick="openNavMenu()">
+        <a href="index.html" class="nav-wordmark">~S</a>
+        <nav id="header-nav">
+            <a class="purple" href="index.html" tabindex="0">Home</a>
+            <a class="pink" href="index.html#down-icon" tabindex="0">Projects</a>
+            <a class="teal" href="contact.html" tabindex="0">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact</h1>
+        <div class="contact-section">
+            <div class="contact-item">
+                <div class="contact-container">
+                    <img class="contact-img" src="../assets/mail.svg" alt="Mail letter icon">
+                </div>
+                <p class="contact-desc">Email: matt.sant143@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-container">
+                    <img class="contact-img" src="../assets/GitHub_Invertocat_White_Clearspace.svg" alt="Github Invertocat Logo">
+                </div>
+                <p class="contact-desc">Github: <a href="https://brand.github.com/foundations/logo"><span class="purple">iunrr</span></a></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="styleguide.html"><span class="teal">Style Guide</span></a>
+        <span class="dash-seperator" aria-hidden="true">-</span>
+        <a href="citations.html"><span class="purple">Citations</span></a>
+        <span class="dash-seperator" aria-hidden="true">-</span>
+        <a  href="https://github.com/iunrr/iat339-portfolio"><img id="github-invertocat" src="../assets/GitHub_Invertocat_White_Clearspace.svg" alt="Github Logo, portfolio Github repository"></a>
+    </footer>
+    <nav id="menu-nav">
+        <div id="menu-top">
+            <a href="index.html" class="nav-wordmark" id="menu-wordmark">~S</a>
+            <img id="close-menu-icon" src="../assets/close.svg" onclick="closeNavMenu()" alt="Close menu">
+        </div>
+        <a class="purple" href="index.html" tabindex="0">Home</a>
+        <a class="pink" href="#down-icon" tabindex="0">Projects</a>
+        <a class="teal" tabindex="0">Contact</a>
+    </nav>
+    <div id="menu-shadow" onclick="closeNavMenu()" aria-hidden="true"></div>
+</body>
+</html>
